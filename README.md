@@ -6,5 +6,6 @@ push this repository to GitHub.
 License
 =======
 The following directories and their contents are Copyright Jiang Feng.
+
 * _posts/
 * images/
