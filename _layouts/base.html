@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="/style/main.css" />
+
+<title>{{ page.title }}</title>
+</head>
+
+
+<body>
+
+<div id="header"></div>
+
+<div id="main">
+
+	<div id="logo">
+		<div class="title"><a href="/">Flynn</a></div>
+		<div class="discription">每天醒来，心中充满一片阳光！</div>
+	</div>
+
+
+	<div id="menu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/posts.html">Posts</a></li>
+			<li><a href="/pictures.html">Pictures</a></li>
+			<li class="rss"><a href="/atom.xml">RSS</a></li>
+		</ul>
+	</div>
+
+	{{content}}
+
+	<div class="clear"></div>
+</div>
+
+
+
+
+<div id="footer">
+	<a href="http://github.com/flynnjiang"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a> 
+	<div id="copyright">
+		License: <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a> |
+		Powered by <a href="http://github.com/">GitHub.com</a> |
+		Theme: <a href="http://wordpress.org/extend/themes/clear">Clear</a>
+	</div>
+</div>
+
+
+</body>
+
+</html>

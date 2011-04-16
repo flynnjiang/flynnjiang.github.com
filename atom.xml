@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Home - Flynn</title>
+ <link href="http://jiangfeng.org/atom.xml" rel="self"/>
+ <link href="http://jiangfeng.org/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://jiangfeng.org/</id>
+ <author>
+   <name>Flynn</name>
+   <email>i@jiangfeng.org</email>
+ </author>
+
+ {% for post in site.posts limit:20 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://jiangfeng.org{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://jiangfeng.org{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
