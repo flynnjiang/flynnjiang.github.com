@@ -1,0 +1,39 @@
+---
+layout: default
+title: Open Source
+---
+
+<div id="projects">
+	<div id="project_google">
+		<h3>Google Code</h3>
+		<div id="google_project">
+			<dl>
+				<dt><a href="http://code.google.com/p/crazytype/">crazytype</a></dt>
+				<dd>一个Linux终端下的趣味打字游戏。</dd>
+			</dl>
+			<dl>
+				<dt><a href="http://code.google.com/p/flynns-website/">flynns-website</a></dt>
+				<dd>个人网站v2</dd>
+			</dl>
+			<dl>
+				<dt><a href="http://code.google.com/p/nwpu8362/">nwpu8362</a></dt>
+				<dd>8362班级记念册</dd>
+			</dl>
+			<dl>
+				<dt><a href="http://code.google.com/p/threat-model/">threat-modle</a></dt>
+				<dd>模型演示</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div id="project_github">
+		<h3>Github</h3>
+		<div id="git_project"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#git_project").loadRepositories("flynnjiang");
+});
+</script>

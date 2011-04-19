@@ -80,12 +80,12 @@ button, .button {
 #logo {padding-top: 30px;}
 #logo .title {font-family:Georgia, Serif, Tahoma, Verdana; font-size:4em; margin-bottom:9px;}
 #logo .title a {color:#999; border-bottom:0px;}
-#logo .discription {color:#aaa; padding-left: 5em;}
+#logo .discription {color:#aaa; padding-left: 6em;}
 
 /************************
  * Menu
  ***********************/
-#menu {border-bottom:5px solid whiteSmoke; margin-bottom: 5px;}
+#menu {border-bottom:5px solid whiteSmoke; margin-bottom: 5px; margin-top:1em;}
 #menu ul {list-style-type:none; text-align:right; margin-bottom: -2px;}
 #menu ul li {display:inline; padding: 0 0.4em; border-bottom: 5px solid whiteSmoke;}
 #menu ul li:hover {border-color:#ef0050;}
@@ -185,13 +185,16 @@ div.gotop a {
 }
 
 #lastest_pictures {}
-#lastest_pictures .flickr_badge_image {margin:0 2em 1.5em 2em;}
+/*
+#lastest_pictures .flickr_badge_image {margin:1.2em;}
 #lastest_pictures #flickr_badge_image1 {float: left;}
 #lastest_pictures #flickr_badge_image2 {float: right;}
 #lastest_pictures #flickr_badge_image3 {float: left;}
-
-
+*/
+#lastest_pictures .flickr_badge_image,
 #more_pictures .flickr_badge_image {float:left; margin: 1.2em;}
+
+#lastest_pictures .flickr_badge_image a,
 #more_pictures .flickr_badge_image a {padding: 10px;}
 
 #lastest_pictures .flickr_badge_image a img,
@@ -207,7 +210,25 @@ div.gotop a {
 #more_posts .meta {font-size: 0.9em; color: #999;}
 
 #related_posts a {border:0;}
+
+#about a {}
+
+#about a:hover {
+	color:#eee;
+	background-color:#ef0050;
+	border: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#projects {padding-bottom: 2em;}
+#projects dl {margin-left: 1em; margin-bottom: 0.5em;}
+#projects dl dt {padding-left: 1em; background: url(../images/bullets.gif) no-repeat left top; margin-bottom: 0.4em;}
+#projects dl dd {}
+
 /************************
  * Common style
  ***********************/
 .clear {clear:both;}
+.align_right {text-align: right;}
