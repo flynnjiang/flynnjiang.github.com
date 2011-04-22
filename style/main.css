@@ -101,7 +101,7 @@ button, .button {
 /************************
  * Content
  ***********************/
-#content {font-size: 14px;}
+#content {font-size: 14px; padding-top:1em;}
 #content h2 {font-size: 1.6em;}
 #content h3 {font-size: 1.3em;}
 #content h2, h3, h4 {
