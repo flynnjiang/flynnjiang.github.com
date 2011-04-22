@@ -8,6 +8,5 @@ License
 The following directories and their contents are Copyright Jiang Feng.
 
 * _posts/
-* images/
 
 [Jekyll]:http://github.com/mojombo/jekyll
