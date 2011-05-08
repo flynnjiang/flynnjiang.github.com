@@ -58,6 +58,7 @@ button, .button {
 	background-color: whiteSmoke;
 	color: #777;
 }
+button:active, .button:active {background-color: #ccc;}
 /************************
  * Layout
  ***********************/
