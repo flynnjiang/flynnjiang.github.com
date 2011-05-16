@@ -19,6 +19,6 @@ category: notes
 名字很简单，功能也极其简单，就是让你能在c文件和h文件之间快速切换。确实是个很
 周到的功能啊。
 
-[C Support]:http://www.vim.org/scripts/script.phpscript_id213 "C Support"
-[Tag List]:http://www.vim.org/scripts/script.phpscript_id273 "Tag List"
-[A]:http://www.vim.org/scripts/script.phpscript_id31 "A"
+[C Support]:http://www.vim.org/scripts/script.php?script_id=213 "C Support"
+[Tag List]:http://www.vim.org/scripts/script.php?script_id=273 "Tag List"
+[A]:http://www.vim.org/scripts/script.php?script_id=31 "A"
