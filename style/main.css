@@ -153,10 +153,14 @@ button:active, .button:active {background-color: #ccc;}
 #post .title {}
 #post .meta {font-size: 0.9em; color: #999; margin-bottom: 10px;}
 #post .entry {padding: 1em 0;}
-#post .entry h1,h2,h3 {padding: 0.5em 0;}
+#post .entry h1, #post .entry h2, #post .entry h3 {
+	padding: 0.5em 0; color: #ef0050; font-weight: normal;
+}
+
 #post .entry h1 {font-size: 1.2em;}
 #post .entry h2 {font-size: 1.0em;}
 #post .entry h3 {font-size: 0.8em;}
+#post .entry img {max-width: 100%;}
 #comments {padding-bottom: 1.2em;}
 div.gotop a {
 	display:block;
