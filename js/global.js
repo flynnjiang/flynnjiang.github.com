@@ -12,9 +12,9 @@ jQuery.fn.loadRepositories = function(username) {
 
     $(repos).each(function() {
       target.append('<dl>'
-                    '<dt><a href="'+ this.url + '">' + this.name + '</a></dt>'
-                    '<dd>' + this.description + '</dd>'
-                    '</dl>');
+                  + '<dt><a href="'+ this.url + '">' + this.name + '</a></dt>'
+                  + '<dd>' + this.description + '</dd>'
+                  + '</dl>');
     });
   });
 
