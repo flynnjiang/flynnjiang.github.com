@@ -10,11 +10,11 @@ jQuery.fn.loadRepositories = function(username) {
     var repos = data.user.repositories;
     sortByNumberOfWatchers(repos);
 
-    var list = $('<dl/>');
-    target.empty().append(list);
     $(repos).each(function() {
-      list.append('<dt><a href="'+ this.url +'">' + this.name + '</a></dt>');
-      list.append('<dd>' + this.description + '</dd>');
+      target.append('<dl>'
+                    '<dt><a href="'+ this.url + '">' + this.name + '</a></dt>'
+                    '<dd>' + this.description + '</dd>'
+                    '</dl>');
     });
   });
 
