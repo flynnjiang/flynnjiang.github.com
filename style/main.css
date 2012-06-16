@@ -1,4 +1,3 @@
-
 /* Elements */
 body, div, p, table, th, td, ul, ol, li, h1, h2, h3, h4, h5, h6,
 blockquote,img,form {margin:0; padding:0; border:0;}
@@ -63,7 +62,7 @@ button:active, .button:active {background-color: #ccc;}
  * Layout
  ***********************/
 #header, #main, #footer {width: 723px; margin: 0 auto; text-align:left;}
-#logo, #menu, #content, #sidebar, #copyright {margin: 0 120px;}
+#logo, #menu, #content, #sidebar, #copyright {margin: 0 115px;}
 #header {
 	margin-top: 30px;
 	height: 60px;
