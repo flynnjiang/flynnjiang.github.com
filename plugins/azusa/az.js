@@ -17,15 +17,15 @@ function azusa() {
 	this.init = function() {
 		if (0 != has_init)
 			return;
-		
+
+		this.add_action("我是梓喵～", "/plugins/azusa/az_5.png");
+		this.add_action("YUI前辈她们都在干什么呢？", "/plugins/azusa/az_2.png");
+		this.add_action("大学里的生活应该很有趣吧。。。", "/plugins/azusa/az_2.png");
+		this.add_action("会不会有时候也想起阿梓呢？", "/plugins/azusa/az_2.png");
 		this.add_action("喵～", "/plugins/azusa/az_3.png");
 		this.add_action("～喵～ 喵～", "/plugins/azusa/az_3.png");
 		this.add_action("hen tai!", "/plugins/azusa/az_4.png");
 		this.add_action("前辈再这样的话，会被阿梓讨厌的哦～", "/plugins/azusa/az_1.png");
-		this.add_action("我是梓喵", "/plugins/azusa/az_5.png");
-		this.add_action("YUI前辈她们都在干什么呢？", "/plugins/azusa/az_2.png");
-		this.add_action("大学里的生活应该很有趣吧。。。", "/plugins/azusa/az_2.png");
-		this.add_action("会不会有时候也想起阿梓呢？", "/plugins/azusa/az_2.png");
 		
 		main_div = document.createElement('div');
 		main_div.style.position = "fixed";
