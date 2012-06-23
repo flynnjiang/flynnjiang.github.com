@@ -94,17 +94,25 @@ function azusa() {
 	};
 	
 	this.click_cb = function () {
+		var next_index;
 		if (0 == action_array.length)
 			return -1;
 
 		curr_index = curr_index % action_array.length;
-		var next_index = (curr_index + 1) % action_array.length;
-
 		main_img.src = action_array[curr_index].img_url;
 		dailog_div.innerText = action_array[curr_index].words;
 		
 		/* Pre load image */
-		preload_img.src = action_array[next_index].img_url;
+		if (preload_img.src == main_img.src)
+		{
+			for (next_index = curr_index + 1; next_index < action_array.length; next_index++)
+			{
+				if (action_array[next_index].img_url != action_array[curr_index].img_url) {
+					preload_img.src = action_array[next_index].img_url;
+					break;
+				}
+			}
+		}
 
 		curr_index++;
 	};
