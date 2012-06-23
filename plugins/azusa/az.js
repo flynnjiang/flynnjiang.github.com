@@ -6,8 +6,9 @@ function azusa() {
 	var curr_index = 0;
 
 	var main_div;
-	var main_img;
 	var dailog_div;
+	var main_img;
+	var preload_img;
 
 	function action(text, img_url) {
 		this.words = text;
@@ -17,16 +18,32 @@ function azusa() {
 	this.init = function() {
 		if (0 != has_init)
 			return;
+		
+		has_init = 1;
+		curr_index = 0;
 
-		this.add_action("我是梓喵～", "/plugins/azusa/az_5.png");
-		this.add_action("YUI前辈她们都在干什么呢？", "/plugins/azusa/az_2.png");
+		this.add_action("稠鱼烧 Daisuki!!", "/plugins/azusa/az_6.gif");
+		
+		this.add_action("大家好！那个……", "/plugins/azusa/az_5.png");
+		this.add_action("我是一年二班的中野梓，", "/plugins/azusa/az_5.png");
+		this.add_action("位置的话，吉他稍微会一点……", "/plugins/azusa/az_5.png");
+		this.add_action("和唯前辈一样呢～", "/plugins/azusa/az_5.png");
+		
+		this.add_action("前辈们现在在做些什么呢？", "/plugins/azusa/az_2.png");
 		this.add_action("大学里的生活应该很有趣吧。。。", "/plugins/azusa/az_2.png");
+		this.add_action("会不会也有轻音部？", "/plugins/azusa/az_2.png");
 		this.add_action("会不会有时候也想起阿梓呢？", "/plugins/azusa/az_2.png");
+		this.add_action("果然还是想和前辈们在一起啊。。。", "/plugins/azusa/az_2.png");
+		
 		this.add_action("喵～", "/plugins/azusa/az_3.png");
 		this.add_action("～喵～ 喵～", "/plugins/azusa/az_3.png");
-		this.add_action("hen tai!", "/plugins/azusa/az_4.png");
-		this.add_action("前辈再这样的话，会被阿梓讨厌的哦～", "/plugins/azusa/az_1.png");
-		
+		this.add_action("Hentai!", "/plugins/azusa/az_4.png");
+		this.add_action("前辈再这样的话，", "/plugins/azusa/az_4.png");
+		this.add_action("会被阿梓讨厌的哦～", "/plugins/azusa/az_4.png");
+		this.add_action("喂！主人，", "/plugins/azusa/az_1.png");
+		this.add_action("不要让我说些奇怪的话啦！！", "/plugins/azusa/az_1.png");
+
+		/* Main containter */
 		main_div = document.createElement('div');
 		main_div.style.position = "fixed";
 		//main_div.style.width = "100px";
@@ -47,20 +64,23 @@ function azusa() {
 		//dailog_div.style.backgroundColor = "red";
 		dailog_div.style.padding = "5px";
 		dailog_div.style.fontSize = "12px";
-		dailog_div.innerText = action_array[0].words;
+		dailog_div.innerText = action_array[curr_index].words;
 		
 		main_img = document.createElement('img');
-		main_img.src = action_array[0].img_url;
+		main_img.src = action_array[curr_index].img_url;
 		main_img.style.cursor = "pointer";
 		main_img.onclick = this.click_cb;
 		
+		preload_img = document.createElement('img');
+		preload_img.src = action_array[curr_index + 1].img_url;
+		preload_img.style.display = "none";
+
 		main_div.appendChild(dailog_div);
 		main_div.appendChild(main_img);
+		main_div.appendChild(preload_img);
 		document.getElementsByTagName('body')[0].appendChild(main_div);
 		
 		curr_index++;
-		
-		has_init = 1;
 	};
 
 	this.add_action = function(text, img_url) {
@@ -74,11 +94,17 @@ function azusa() {
 	};
 	
 	this.click_cb = function () {
-		if (curr_index >= action_array.length)
-			curr_index = 0;
+		if (0 == action_array.length)
+			return -1;
+
+		curr_index = curr_index % action_array.length;
+		var next_index = (curr_index + 1) % action_array.length;
 
 		main_img.src = action_array[curr_index].img_url;
 		dailog_div.innerText = action_array[curr_index].words;
+		
+		/* Pre load image */
+		preload_img.src = action_array[next_index].img_url;
 
 		curr_index++;
 	};
