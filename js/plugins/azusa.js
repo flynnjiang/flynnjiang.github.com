@@ -69,7 +69,7 @@
 			'bottom' : '100px',
 			'padding' : '5px',
 			'font-size' : '12px',
-			'text-algin' : 'left',
+			'text-align' : 'left',
 			'border' : '1px solid #ccc',
 			'-webkit-border-radius' : '8px',
 			'-moz-border-radius' : '8px',
