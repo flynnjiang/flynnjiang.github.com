@@ -20,7 +20,7 @@ layout: base
 
 
 	<div id="related_posts">
-		<h3>相关日志</h3>
+		<h3>鐩稿叧鏃ュ織</h3>
 		<ul>
 			{% for post in site.related_posts limited:3 %}
 			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -30,7 +30,7 @@ layout: base
 
 
 	<div id="comments">
-		<h3>评论</h3>
+		<h3>璇勮</h3>
 		<!--div>No comments</div-->
 		<div id="disqus_thread"></div>
 
@@ -39,7 +39,7 @@ layout: base
 			var disqus_shortname = 'jiangfeng-org'; // required: replace example with your forum shortname
 			var disqus_identifier = '{{ page.id }}';
 			var disqus_url = 'http://jiangfeng.org' + '{{ page.url }}';
-			var disqus_default_text = "不吐槽一下么？";
+			var disqus_default_text = "锟斤拷锟铰诧拷一锟斤拷么锟斤拷";
 			
 			/* * * DON'T EDIT BELOW THIS LINE * * */
 			(function() {
