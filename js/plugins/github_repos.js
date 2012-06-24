@@ -30,6 +30,6 @@
 		var target = this;
 		var options = $.extend(defaults, options);
 
-		$.getJSON('https://api.github.com/users/' + options.username + '/repos', options.callback);
+		$.getJSON('https://api.github.com/users/' + options.username + '/repos?callback=?', options.callback);
 	};
 })(jQuery);
