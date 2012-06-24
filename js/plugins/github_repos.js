@@ -16,7 +16,7 @@
 		var ReposCallback = function(result) {
 			$(result.data).each(function() {
 				target.append('<dl>'
-					+ '<dt><a href="'+ this.url + '">' + this.name + '</a></dt>'
+					+ '<dt><a href="'+ this.html_url + '">' + this.name + '</a></dt>'
 					+ '<dd>' + this.description + '</dd>'
 					+ '</dl>');
 			});
