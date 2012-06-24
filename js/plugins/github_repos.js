@@ -13,8 +13,8 @@
 (function($) {
 	$.fn.GitHubRepos = function(options) {
 
-		var ReposCallback = function(data) {
-			$(data).each(function() {
+		var ReposCallback = function(result) {
+			$(result.data).each(function() {
 				target.append('<dl>'
 					+ '<dt><a href="'+ this.url + '">' + this.name + '</a></dt>'
 					+ '<dd>' + this.description + '</dd>'
