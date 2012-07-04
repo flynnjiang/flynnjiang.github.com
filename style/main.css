@@ -11,6 +11,7 @@ body {
   	font-size: 10px; /* easy scaling */
   	font-size: 0.76em;
 	color: #000;
+	background-color: white;
 	text-align: center;
 }
 a {color: #000; text-decoration:none;}
