@@ -7,7 +7,7 @@
         var defaults = {
             'id' : '5568048636599513853',
             'key' : 'AIzaSyD9TfhepQP6C50axzubBBPHMHoPFnDdcJw',
-            'max_posts' : '10'
+            'max_posts' : '20'
         };
 
 		var options = $.extend(defaults, options);
@@ -61,6 +61,7 @@
                 'https://www.googleapis.com/blogger/v3/blogs/' + options.id + '/posts'
                 + '?'
                 + 'fields=items(published,title,updated,url),nextPageToken,prevPageToken'
+				+ 'maxResults=' + options.max_posts
                 + (page_token ? ('&pageToken=' + page_token) : "")
                 + '&key=' + options.key,
                 resp_callback);
