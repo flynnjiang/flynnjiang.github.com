@@ -61,7 +61,7 @@
                 'https://www.googleapis.com/blogger/v3/blogs/' + options.id + '/posts'
                 + '?'
                 + 'fields=items(published,title,updated,url),nextPageToken,prevPageToken'
-				+ 'maxResults=' + options.max_posts
+				+ '&maxResults=' + options.max_posts
                 + (page_token ? ('&pageToken=' + page_token) : "")
                 + '&key=' + options.key,
                 resp_callback);
