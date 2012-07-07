@@ -25,7 +25,7 @@
                 return -1;
             }
 
-			$("ul#blogger_posts", target).html("");
+            /*$("ul#blogger_posts", target).html("");*/
 			
 			$(result.items).each(function() {
 				$("ul#blogger_posts", target).append(
@@ -72,8 +72,7 @@
             target.append(
                   '<ul id="blogger_posts"></ul>'
                 + '<div id="blogger_pagination">'
-                + '     <a id="blogger_prev_page" href="javascript:void(0)" onclick="BloggerPrevPage()">第一页</a>'
-                + '     <a id="blogger_next_page" href="javascript:void(0)" onclick="BloggerNextPage()">下一页</a>'
+                + '     <a id="blogger_next_page" href="javascript:void(0)" onclick="BloggerNextPage()">查看更多...</a>'
                 + '</div>'
             );
         }
@@ -85,13 +84,9 @@
         });
 
         $("#blogger_pagination a").css({
-            'margin' : '0 0 0 1em',
-            'color' : '#ccc',
-            'border' : '1px solid #ccc',
-            'padding' : '1px',
-            '-webkit-border-radius' : '4px',
-			'-moz-border-radius' : '4px',
-			'border-radius' : '4px',
+            'display' : 'block',
+            'height' : '2em',
+
             'text-align' : 'center'
         });
 

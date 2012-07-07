@@ -92,7 +92,9 @@
 		$('#azusa_image').click(function(){
 			curr_idx++;
 			curr_idx = curr_idx % options.length;
-			$('#azusa_image').attr('src', options[curr_idx].img_url);
+            if (options[curr_idx].img_url && "" != options[curr_idx].img_url) {
+			    $('#azusa_image').attr('src', options[curr_idx].img_url);
+            }
 			$('#azusa_words').text(options[curr_idx].words);
 
 			pre_load();
