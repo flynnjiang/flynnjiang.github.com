@@ -43,8 +43,8 @@ pandoc的默认模板，然后修改一下字体就行了。
 至于字体的名称，可以使用`fc-list :lang=zh`来查看。模板修改完毕后，我们
 只要在生成时加上"--template=<path>"选项就OK了。
 
-默认情况下，TeX引擎是按着英文对习惯来排版的，对于中文，会显得比较难看，
-这时候可以考虑使用一下xeCJK宏包。xeCJK对针对中文做了一些版式的微调，
+默认情况下，TeX引擎是按着英文的习惯来排版的，对于中文，会显得比较难看，
+这时候可以考虑使用一下xeCJK宏包。xeCJK针对中文做了一些版式上的微调，
 看起来会舒服点。
 
     ...
@@ -84,7 +84,7 @@ XeTeX和上面提到的fc-list，都可以通过安装texlive这个发行版搞�
 非常简单，综合上面的两个选项就可以：
 ~~`markdown2pdf --template=./pandoc.template --xetex hello.md`~~
 
-*新版本的pandoc中，已经去掉了markdown2pdf这个工具。相应对应的，pandoc
+*新版本的pandoc中，已经去掉了markdown2pdf这个工具。相应的，pandoc
 已经可以直接导出pdf了。用法基本没变，如下：*
 
     pandoc hello.md --latex-engine=xelatex --template=pandoc.template -o hello.pdf
