@@ -42,7 +42,10 @@ blockquote {
 }
 
 pre {
-	font-size:1.5em;
+}
+
+code {
+    font-family: serif;
 }
 
 textarea, .textarea, button, .button {
