@@ -41,11 +41,14 @@ blockquote {
 	background: #eee;
 }
 
-pre {
+pre code {
+    display: block;
 }
 
 code {
-    font-family: serif;
+    font-family: monospace, sans-serif;
+    border: 1px solid rgb(222, 222, 222);
+    color: rgb(68, 68, 68);
 }
 
 textarea, .textarea, button, .button {
