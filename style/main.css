@@ -41,14 +41,21 @@ blockquote {
 	background: #eee;
 }
 
-pre code {
-    display: block;
-}
 
 code {
     font-family: monospace, sans-serif;
-    border: 1px solid rgb(222, 222, 222);
-    color: rgb(68, 68, 68);
+    /* font-size: 0.8em; */
+    padding: 0.1em 0.3em;
+    margin: 0.2em;
+    border: 1px solid #ddd;
+    color: #555;
+    background: #fcfcfc;
+}
+
+pre code {
+    display: block;
+    overflow: auto;
+    padding: 1em;
 }
 
 textarea, .textarea, button, .button {
@@ -96,7 +103,7 @@ button:active, .button:active {background-color: #ccc;}
 #menu ul {list-style-type:none; text-align:right; margin-bottom: -2px;}
 #menu ul li {display:inline; padding: 0 0.4em; border-bottom: 5px solid whiteSmoke;}
 #menu ul li:hover {border-color:#ef0050;}
-#menu ul li a {color: #999; border: 0;}
+#menu ul li a {color: #999; border: 0; letter-spacing: 1px;}
 
 
 #menu li.rss a {padding-right: 20px; background: url(../images/icon_feed_off.gif) no-repeat top right;}
@@ -163,15 +170,26 @@ button:active, .button:active {background-color: #ccc;}
 	padding: 0.5em 0; color: #ef0050; font-weight: normal;
 }
 
-#post .entry h1 {font-size: 1.2em;}
-#post .entry h2 {font-size: 1.0em;}
-#post .entry h3 {font-size: 0.8em;}
+#post .entry h1 {
+    font-size: 1.4em;
+    border-bottom: 1px solid #ef0050;
+    margin-top:1em;
+    margin-bottom: 0.5em;
+}
+#post .entry h2 {font-size: 1.2em;}
+#post .entry h3 {
+    font-size: 1.0em;
+    font-style: oblique;
+    font-weight:lighter;
+}
 #post .entry img {max-width: 100%;}
 #comments {padding-bottom: 1.2em;}
 div.gotop a {
 	display:block;
 	font-size:0.8em;
-	padding: 2px 1em;
+    	color: #999;
+	padding: 5px 1em;
+    	letter-spacing: 0.2em;
 	margin-bottom: 1em;
 	text-align: right;
 	border: 0;
