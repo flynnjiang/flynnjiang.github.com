@@ -60,7 +60,7 @@
             $.getJSON(
                 'https://www.googleapis.com/blogger/v3/blogs/' + options.id + '/posts'
                 + '?'
-                + 'fields=items(published,title,updated,url),nextPageToken,prevPageToken'
+                + 'fields=items(published,title,updated,url),nextPageToken'
 				+ '&maxResults=' + options.max_posts
                 + (page_token ? ('&pageToken=' + page_token) : "")
                 + '&key=' + options.key,
