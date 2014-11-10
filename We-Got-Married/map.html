@@ -14,9 +14,9 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 
-<body style="margin:0; padding:0;">
+<body>
   <!--百度地图容器-->
-  <div style="width:490px;height:490px;border:#ccc solid 1px;" id="dituContent"></div>
+  <div style="width:490px;height:190px;border:#ccc solid 1px;" id="dituContent"></div>
 </body>
 <script type="text/javascript">
     //创建和初始化地图函数：
@@ -30,8 +30,8 @@
     //创建地图函数：
     function createMap(){
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(111.596769,29.766827);//定义一个中心点坐标
-        map.centerAndZoom(point,11);//设定地图的中心点和坐标并将地图显示在地图容器中
+        var point = new BMap.Point(111.641775,29.812872);//定义一个中心点坐标
+        map.centerAndZoom(point,8);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
     }
     
@@ -45,17 +45,11 @@
     
     //地图控件添加函数：
     function addMapControl(){
-        //向地图中添加缩放控件
-	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-	map.addControl(ctrl_nav);
-                //向地图中添加比例尺控件
-	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-	map.addControl(ctrl_sca);
-    }
+                        }
     
     //标注点数组
-    var markerArr = [{title:"合口镇",content:"我的备注",point:"111.599069|29.632302",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
-		 ,{title:"官厅乡",content:"我的备注",point:"111.577222|29.74676",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+    var markerArr = [{title:"合口镇",content:"我的备注",point:"111.599087|29.63224",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ,{title:"官厅乡",content:"我的备注",point:"111.587158|29.756701",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
 		 ];
     //创建marker
     function addMarker(){
