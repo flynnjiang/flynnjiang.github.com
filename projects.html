@@ -1,38 +1,26 @@
 ---
-layout: default
-title: Open Source
+layout: base
+title: 點子 
 ---
 
-<div id="projects">
-	<div id="open_source">
-		<h3>Open Source</h3>
-		<p>Projects I'm involved with.(Or maybe forked for fun!)
-
-		<div id="all_projects">
-			<dl>
-				<dt><a href="http://code.google.com/p/crazytype/">crazytype</a></dt>
-				<dd>一个Linux终端下的趣味打字游戏。</dd>
-			</dl>
-			<dl>
-				<dt><a href="http://code.google.com/p/flynns-website/">flynns-website</a></dt>
-				<dd>个人网站v2</dd>
-			</dl>
-			<dl>
-				<dt><a href="http://code.google.com/p/nwpu8362/">nwpu8362</a></dt>
-				<dd>8362班级记念册</dd>
-			</dl>
-			<dl>
-				<dt><a href="http://code.google.com/p/threat-model/">threat-modle</a></dt>
-				<dd>模型演示</dd>
-			</dl>
-		</div>
-
-	</div>
-</div>
+	<p class="path">
+		<a href="/">首页</a> > <a href="/projects.html">点子</a>
+	</p>
+	
+	<p class="intro">这里有我喜欢的一些小项目，有的已经完成了，<br />
+	有的正在进行中，还有的只是个点子。</p>
+	
+	<hr />
+	
+	<dl  class="projects_list">
+        <dt><a href="http://crazytype.sourceforge.net/" target="_blank">CrazyType</a></dt>
+        <dd>一个Linux终端下的趣味打字游戏。</dd>
+	</dl>
 
 <script type="text/javascript" src="/js/plugins/github_repos.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#all_projects').GitHubRepos();
+	$('.projects_list').GitHubRepos();
 });
 </script>
+

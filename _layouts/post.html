@@ -2,26 +2,25 @@
 layout: base
 ---
 
-<div id="content">
-	<div id="post">
-		<h2 class="title">{{page.title}}</h2>
+	<p class="path">
+		<a href="/">首页</a> > <a href="/notes.html">烂笔头</a>
+	</p>
+    
 
-		<div class="meta">{{page.date | date:"%Y-%m-%d"}}, {{page.category}}</div>
+	<article class="post">
+		<h1 class="post_title">{{page.title}}</h1>
 
-		<div class="entry">
+		<div class="post_meta">{{page.date | date:"%Y-%m-%d"}}, {{page.category}}</div>
+
+		<div class="post_content">
 			{{content}}
-
-			<p>-- END --</p>
 		</div>
-	</div>
+	</article>    
 
-
-	<div class="gotop"><a class="top" href="#header">[返回顶部]</a></div>
-
+    <hr />
 
 	<div id="related_posts">
-		<h3>相关日志</h3>
-		<ul>
+		<ul class="post_list">
 			{% for post in site.related_posts limited:3 %}
 			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
@@ -30,7 +29,6 @@ layout: base
 
 
 	<div id="comments">
-		<h3>评论</h3>
 		<!--div>No comments</div-->
 		<div id="disqus_thread"></div>
 
@@ -48,10 +46,9 @@ layout: base
 				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 			})();
 		</script>
+    </div>
 
-	</div>
 
 
 	<div class="clear"></div>
-</div>
 

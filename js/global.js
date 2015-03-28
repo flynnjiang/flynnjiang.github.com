@@ -1,1 +1,9 @@
-/* Global Functions */
+
+/**************************
+ * Commom Functions
+ *************************/
+
+/* Top Nav */
+
+
+/* Top Search Box */

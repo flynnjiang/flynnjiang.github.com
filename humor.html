@@ -1,15 +1,22 @@
 ---
-layout: default
-title: Humor
+layout: base
+title: 心情 
 ---
 
-
-<div id="more_posts">
-	<h2>Humor</h2>
-
-	<ul>
-	{% for post in site.categories.humor %}
-		<li><a href="{{ post.url }}">{{ post.title }}</a> <span class="meta">({{ post.date | date_to_string }})</span></li>
-	{% endfor %}
+	<p class="path">
+		<a href="/">首页</a> > <a href="/humor.html">心情</a>
+	</p>
+	
+	<p class="intro">
+        三三两两琐碎事，
+        喜喜忧忧小心情。
+    </p>
+	
+	
+	<ul class="post_list">
+	
 	</ul>
-</div>
+
+	
+
+
