@@ -147,6 +147,9 @@ header {overflow: hidden;}
 
 
 .humor_list {}
+.humor_list {} li {font-size: 20px; margin-bottom: 1em;}
+.humor_list .meta {font-size: 14px;}
+
 
 .notes_list {}
 .notes_list li {font-size: 20px; margin-bottom: 1em;}

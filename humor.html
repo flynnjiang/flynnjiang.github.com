@@ -4,10 +4,30 @@ title: 心情
 desc: 三三两两琐碎事，喜喜忧忧小心情。
 ---
 
-<ul class="humor_list">
+<div class="humor_loading">努力加载中……</div>
 
+<ul class="humor_list">
 </ul>
 
+
+
+<script type="text/javascript" src="/js/plugins/jquery.tumblr-post.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	function handle_result(result){
+		$.each(result.posts, function(){
+			$(".humor_list").append('<li><a href="' + this['url'] + '" target="blank">' + this['regular-title'] + '</a>'
+				+ ' <span class="meta">(' + this['date'] + ')</span></li>');
+		})
+		
+		$(".humor_loading").hide();
+		$(".humor_list").show();
+	}
+
+	$(".humor_list").hide();
+	$(".humor_loading").show();
 	
-
-
+	var tumblr = TumblrPost({'username':'flynnjiang'});
+	tumblr.get_recent_posts(5, handle_result);
+});
+</script>
