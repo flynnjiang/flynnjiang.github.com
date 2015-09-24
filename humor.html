@@ -4,30 +4,32 @@ title: 心情
 desc: 三三两两琐碎事，喜喜忧忧小心情。
 ---
 
-<div class="humor_loading">努力加载中……</div>
+<div class="humor_loading">
+	<i class="tea-big"></i>
+	<p>稍等一会儿，正在努力加载中……</p>
+</div>
 
 <ul class="humor_list">
 </ul>
 
+<div class="humor_tips"><a href="http://flynnjiang.tumblr.com/" target="_blank">去我的Tumblr上了解更多…</a></div>
 
-
-<script type="text/javascript" src="/js/plugins/jquery.tumblr-post.js"></script>
+<!-- Get Tumblr Posts List -->
 <script type="text/javascript">
-$(document).ready(function(){
-	function handle_result(result){
-		$.each(result.posts, function(){
-			$(".humor_list").append('<li><a href="' + this['url'] + '" target="blank">' + this['regular-title'] + '</a>'
-				+ ' <span class="meta">(' + this['date'] + ')</span></li>');
-		})
-		
-		$(".humor_loading").hide();
-		$(".humor_list").show();
-	}
+$(".humor_loading").show();
+$(".humor_list").hide();
+$(".humor_tips").hide();
 
-	$(".humor_list").hide();
-	$(".humor_loading").show();
+function tumblr_cb(data){
+	$.each(data.posts, function(){
+		$(".humor_list").append('<li><a href="' + this['url'] + '" target="blank">' + this['regular-title'] + '</a>'
+				+ ' <span class="meta">(' + this['date-gmt'].substr(0, 10) + ')</span></li>');
+	});
 	
-	var tumblr = TumblrPost({'username':'flynnjiang'});
-	tumblr.get_recent_posts(5, handle_result);
-});
+	$(".humor_loading").fadeOut("slow", function(){
+		$(".humor_list").fadeIn();
+		$(".humor_tips").fadeIn();
+	});
+}
 </script>
+<script type="text/javascript" src="http://flynnjiang.tumblr.com/api/read/json?num=5&callback=tumblr_cb"></script>

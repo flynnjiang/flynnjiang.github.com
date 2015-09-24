@@ -147,8 +147,18 @@ header {overflow: hidden;}
 
 
 .humor_list {}
-.humor_list {} li {font-size: 20px; margin-bottom: 1em;}
-.humor_list .meta {font-size: 14px;}
+.humor_list li {font-size: 20px; margin-bottom: 1em;}
+.humor_list li .meta {font-size: 14px;}
+
+.humor_loading {
+	text-align: center;
+	color: #f54641;
+	font-size: 20px;
+}
+.humor_loading i {margin: 20px auto;}
+
+.humor_tips {text-align: right;}
+
 
 
 .notes_list {}
@@ -493,6 +503,14 @@ i.message-small {
   background: url('../images/sprite.png') no-repeat;
   background-position: -950px -150px;
 }
+
+i.tea-big {
+	width: 70px;
+	height: 60px;
+	background: url('../images/sprite.png') no-repeat;
+	background-position: -930px -500px;
+}
+
 i.download-small {
   width: 18px;
   height: 16px;
