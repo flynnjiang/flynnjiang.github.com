@@ -4,15 +4,17 @@ title: 心情
 desc: 三三两两琐碎事，喜喜忧忧小心情。
 ---
 
+
 <div class="humor_loading">
 	<i class="tea-big"></i>
 	<p>稍等一会儿，正在努力加载中……</p>
 </div>
 
-<ul class="humor_list">
-</ul>
+<div class="humor_list">
+</div>
 
-<div class="humor_tips"><a href="http://flynnjiang.tumblr.com/" target="_blank">去我的Tumblr上了解更多…</a></div>
+
+<div class="humor_tips"><a href="http://flynnjiang.tumblr.com/" target="_blank">去我的Tumblr上了解更多吧…</a></div>
 
 <!-- Get Tumblr Posts List -->
 <script type="text/javascript">
@@ -22,12 +24,17 @@ $(".humor_tips").hide();
 
 function tumblr_cb(data){
 	$.each(data.posts, function(){
-		$(".humor_list").append('<li><a href="' + this['url'] + '" target="blank">' + this['regular-title'] + '</a>'
-				+ ' <span class="meta">(' + this['date-gmt'].substr(0, 10) + ')</span></li>');
+		$(".humor_list").append(
+		  '<article class="humor_post">'
+		+   '<h1 class="humor_title"><a href="' + this['url'] + '" target="_blank">' + this['regular-title'] + '</a></h1>'
+		+   '<div class="humor_meta">' + this['date'] + '</div>'
+		+   '<div class="humor_content">' + this['regular-body'] + '</div>'
+		// +   '<div class="humor_more"><a href="' + this['url'] + '" target="_blank">去我的Tumblr上查看全文</a></div>'
+		+ '</article>');
 	});
 	
 	$(".humor_loading").fadeOut("slow", function(){
-		$(".humor_list").fadeIn();
+		$(".humor_list").slideDown(2000);
 		$(".humor_tips").fadeIn();
 	});
 }

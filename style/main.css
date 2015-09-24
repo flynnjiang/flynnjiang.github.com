@@ -145,17 +145,22 @@ header {overflow: hidden;}
 	margin-bottom: 100px;
 }
 
-
-.humor_list {}
-.humor_list li {font-size: 20px; margin-bottom: 1em;}
-.humor_list li .meta {font-size: 14px;}
-
 .humor_loading {
 	text-align: center;
 	color: #f54641;
 	font-size: 20px;
 }
 .humor_loading i {margin: 20px auto;}
+
+.humor_list {}
+.humor_list li {font-size: 20px; margin-bottom: 1em;}
+.humor_list li .meta {font-size: 14px;}
+
+.humor_post {margin-bottom: 40px; padding-bottom: 20px; border-bottom: solid #ccc 2px;}
+.humor_title {margin-bottom: 5px;}
+.humor_meta {color: #999; font-size: 14px; margin-bottom: 20px;}
+.humor_content {line-height: 1.7em;}
+.humor_content p {margin-bottom: 1.5em;}
 
 .humor_tips {text-align: right;}
 
