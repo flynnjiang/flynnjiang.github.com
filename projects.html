@@ -8,12 +8,19 @@ desc: 这里有我喜欢的一些小项目。
 	<dd>一个Linux终端下的趣味打字游戏。</dd>
 </dl>
 
-
-<script type="text/javascript" src="/js/plugins/github_repos.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	$('.projects_list').GitHubRepos();
-});
+$(".projects_list").hide();
+
+function github_cb(rsp){
+	$.each(rsp.data, function(){
+		$(".projects_list").append(
+					  '<dt><a href="'+ this.html_url + '" target="_blank">' + this.name + '</a></dt>'
+					+ '<dd>' + this.description + '</dd>');
+	});
+	
+	$(".projects_list").slideDown(1000);
+}
 </script>
+<script type="text/javascript" src="https://api.github.com/users/flynnjiang/repos?callback=github_cb"></script>
 
 <div class="clear"></div>
