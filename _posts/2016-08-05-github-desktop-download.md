@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Github Destop离线安装包
+title: Github Desktop离线安装包
 category: notes
 ---
 
