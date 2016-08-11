@@ -23,6 +23,9 @@ hr {
 }
 
 
+blockquote, q {font-style:italic;}
+
+
 code {
 	font-family: Courier New, "微软雅黑"; 
 	border: solid 1px #ccc;
