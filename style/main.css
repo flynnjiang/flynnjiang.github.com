@@ -77,9 +77,10 @@ footer {
 	margin-top: 100px;
 	margin-bottom: 20px;
 	text-align: center;
-	
-
 }
+
+#web_analytics {font-size: 12px;}
+#web_analytics a {color: #AFA9A2;}
 
 /****************************
  * PAGE HEADER
@@ -665,3 +666,4 @@ i.ws-cross {
   background: url('../images/sprite.png') no-repeat;
   background-position: -400px -200px;
 }
+
