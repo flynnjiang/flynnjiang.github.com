@@ -7,7 +7,7 @@ desc: 三三两两琐碎事，喜喜忧忧小心情。
 
 <div class="humor_loading">
 	<i class="tea-big"></i>
-	<p>稍等一会儿，正在努力加载中……</p>
+	<p>稍等一会儿，正在努力加载中</p>
 </div>
 
 <div class="humor_list">
@@ -18,12 +18,36 @@ desc: 三三两两琐碎事，喜喜忧忧小心情。
 
 <!-- Get Tumblr Posts List -->
 <script type="text/javascript">
+var loading_timewait = 0;
+var loading_string = "";
+var loading_timer = setInterval("loading_tips();", 1000);
+
+function loading_tips()
+{	
+	if (loading_timewait++ > 20) {
+		clearInterval(loading_timer);
+		$(".humor_loading p").html(
+			'对不起！<a href="https://baike.baidu.com/item/great%20firewall" target="_blank">“长城防火墙”</a>正在防止您看一些不该看的东西。'
+			+ '<br />又或许，您也正渴望着<a href="http://s3.amazonaws.com/urtuz53txrmk9/index.html" target="_blank">“自由”……</a>');
+		return;
+	}
+		
+	if (loading_string.length < 6)
+		loading_string = loading_string + ".";
+	else
+		loading_string = ".";
+		
+	$(".humor_loading p").html("稍等一会儿，正在努力加载中" + loading_string);
+}
+
 $(".humor_loading").show();
 $(".humor_list").hide();
 $(".humor_tips").hide();
 
 function tumblr_cb(data){
 	$.each(data.posts, function(){
+		clearInterval(loading_timer);
+	
 		$(".humor_list").append(
 		  '<article class="humor_post">'
 		+   '<h1 class="humor_title"><a href="' + this['url'] + '" target="_blank">' + this['regular-title'] + '</a></h1>'

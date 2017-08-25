@@ -12,8 +12,12 @@ desc: 这里有我喜欢的一些小项目。
 $(".projects_list").hide();
 
 function github_cb(rsp){
+	rsp.data.sort(function(a, b){
+		return Date.parse(a.pushed_at) - Date.parse(b.pushed_at);
+	});
+	
 	$.each(rsp.data, function(){
-		$(".projects_list").append(
+		$(".projects_list").prepend(
 					  '<dt><a href="'+ this.html_url + '" target="_blank">' + this.name + '</a></dt>'
 					+ '<dd>' + this.description + '</dd>');
 	});
